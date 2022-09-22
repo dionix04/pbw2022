@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Latihan HTML minggu 3</title>
+    </head>
+<body>
+    <center>
+        <table>
+            <h1>SELAMAT HARI SELASA</h1>
+            <h4 id="tag">Nabil Daffa As'ad Saputra ~ A11.2022.14371 ~ Pemrograman Berbasis Web</h4>
+            <p>
+                <button onclick="playPause()" type="button">Play/pause video</button>
+                <button onclick="makeBig()" type="button">Perbesar</button>
+                <button onclick="makeNormal()" type="button">Normal</button>
+                <button onclick="makeSmall()" type="button">perkecil</button>
+                <button onclick="makemoreBigger()">Lebih Besar</button>
+                <button onclick="mute()">Mute Suara</button>
+                <button onclick="unmute()">Bunyikan suara</button>
+                <br> <br>
+
+            </p>
+            <video id="myVideo" width="260">
+                <source src = "kyoo.mp4" type ="video/mp4">
+                Video file not support...
+            </video>
+    </center>
+</body>
+<script>
+    var vid = document.getElementById("myVideo");
+
+    function playPause() {
+        if (myVideo.paused)
+            myVideo.play();
+        else    
+            myVideo.pause();
+    }
+    
+    function makeBig() {
+        myVideo.width=500;
+    }
+
+    function makeNormal() {
+        myVideo.width=260;
+    }
+
+    function makeSmall() {
+        myVideo.width=125;
+    }
+
+    function makemoreBigger() {
+        myVideo.width=1000;
+    }
+
+    function mute() {
+        myVideo.muted = true
+    }
+
+    function unmute() {
+        myVideo.muted = false
+    }
+
+    
+</script>
+</html>
